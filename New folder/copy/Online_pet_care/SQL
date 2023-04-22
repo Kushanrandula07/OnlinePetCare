@@ -1,0 +1,69 @@
+create database OnlinePetCare;
+use onlinePetCare;
+Create table Doctor(
+DoctorID INT NOT NULL primary key,
+DoctorName Varchar(30)NOT NULL,
+JobTitle Varchar(25),
+Doc_ContactNum INT(10),
+Doc_Email Varchar(50),
+TreatmentDate Varchar(100),
+LoginHours INT
+);
+
+Create table Petshops(
+PetshopID INT NOT NULL primary key,
+PetshopName Varchar(30)NOT NULL,
+Medicine Varchar(100),
+Food Varchar(100),
+Pet Varchar(100),
+PetItem Varchar(100),
+PetShop_ContactNum INT(10),
+LoginHours INT
+);
+
+Create table Pet_care_center(
+PetCareCenID INT NOT NULL primary key,
+PetCareCenName Varchar(30)NOT NULL,
+DoctorDetail Varchar(100),
+Location Varchar(100),
+PetCareCen_ContactNum INT(10),
+LoginHours INT
+);
+Create table Pet_owners(
+PetOwnerID INT NOT NULL primary key,
+PetOwnerName Varchar(30)NOT NULL,
+PetOwner_ContactNum INT(10),
+PetOwner_Email Varchar(50),
+PetOwner_Gender char(2),
+Location Varchar(100)
+);
+
+Create table Pet(
+PetID INT NOT NULL primary key,
+PetName Varchar(30)NOT NULL,
+Breed Varchar(50),
+PetAge INT,
+PetBirthday Date('YYYY-MM-DD'),
+PetOwner_ContactNum INT(10),
+Petr_Gender char(2),
+Location Varchar(100)
+);
+
+Create table Pet_cemetry(
+PetCemt_ID INT NOT NULL primary key,
+PetName varchar (20) Not Null,
+Death_Date Date('YYYY-MM-DD'),
+Death_Place Varchar(30)
+);
+
+Create table Online_appointment(
+Appoi_ID INT NOT NULL primary key,
+Appoi_Time Time (fsp),
+PetOwner_ID,
+PetOwnerName,
+PetDiagonisetype,
+PetOwner_ContactNum,
+DoctorName
+DoctorID
+
+);
